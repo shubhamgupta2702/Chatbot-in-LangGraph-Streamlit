@@ -7,7 +7,8 @@ from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 import operator
 from langgraph.graph.message import add_messages
 from langgraph.checkpoint.memory import MemorySaver
-
+from langgraph.prebuilt import ToolNode, tool_node
+from langchain_community.tools import DuckDuckGoSearchRun
 load_dotenv()
 
 llm = HuggingFaceEndpoint(
